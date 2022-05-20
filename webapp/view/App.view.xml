@@ -1,15 +1,14 @@
-<mvc:View 
-	controllerName="demo.controller.App"
-	xmlns:mvc="sap.ui.core.mvc" 
-	xmlns="sap.m">
-	<Text text="Hello UI5!"></Text>
-	<Button 
-	text="{i18n>showHelloButtonText}"
-	press=".onShowHello"></Button>
-	<Input 
-		value="{/recipient/name}"
-		description="Hello {/recipient/name}"
-		valueLiveUpdate="true"
-		width="60%"
-	></Input>
+<mvc:View controllerName="demo.controller.App" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" displayBlock="true">
+	<Shell>
+		<App class="myAppDemoWt">
+			<pages>
+				<Page title="{i18n>homePageTitle}">
+					<content>
+						<mvc:XMLView viewName="demo.view.HelloPanel"></mvc:XMLView>
+						<mvc:XMLView viewName="demo.view.InvoiceList"></mvc:XMLView>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
 </mvc:View>

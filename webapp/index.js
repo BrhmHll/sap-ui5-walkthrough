@@ -1,17 +1,16 @@
 sap.ui.define([
 	"sap/m/Text",
-	"sap/ui/core/mvc/XMLView"
-], function(Text, XMLView) {
+	"sap/ui/core/mvc/XMLView",
+	"sap/ui/core/ComponentContainer"
+], function(Text, XMLView, ComponentContainer) {
 	'use strict';
-	// alert("UI5 is ready!");
 
-	XMLView.create({
-		viewName: "demo.view.App"
-	}).then(function (oView) {
-		oView.placeAt("content");
-	})
+	new ComponentContainer({
+		name : "demo",
+		settings: {
+			id: "demo"
+		},
+		async : true
+	}).placeAt("content")
 
-	// new Text({
-	// 	text: "Hello World!"
-	// }).placeAt("content");
 });

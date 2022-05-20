@@ -10,10 +10,13 @@
 		data-sap-ui-resourceroots='{
 			"demo": "./"
 		}'
+		data-sap-ui-onInit="module:sap/ui/core/ComponentSupport"
 		data-sap-ui-onInit="module:demo/index"
 		data-sap-ui-compatVersion="edge"
 		data-sap-ui-async="true">
 	</script>
 </head>
-<body class="sapUiBody" id="content"></body>
+<body class="sapUiBody" id="content">
+	<div data-sap-ui-component data-name="demo" data-id="container" data-settings='{"id" : "demo"}'></div>
+</body>
 </html>
