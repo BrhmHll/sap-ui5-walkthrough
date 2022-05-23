@@ -14,6 +14,15 @@ sap.ui.define([
                 currency:"EUR"
             });
             this.getView().setModel(oViewModel, "view")
+
+            $.ajax({
+                method: "GET",
+                url: "http://192.168.5.20:8004/sap/opu/odata/sap/ZIHS_STUDENT_SERVICE_SRV/itstudentSet?$format=json",
+                dataType: "JSON"
+              }).done(function(data){console.log(data)});
+            //   const url = 'http://192.168.5.20:8004/sap/opu/odata/sap/ZIHS_STUDENT_SERVICE_SRV/itstudentSet?$format=json';
+            //   const model = new sap.ui.model.odata.v2.ODataModel(url);
+            //   console.log(model);
         },
         onFilterInvoices : function (oEvent) {
             //build filter array
