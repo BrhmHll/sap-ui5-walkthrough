@@ -17,10 +17,14 @@ sap.ui.define([
 
             $.ajax({
                 method: "GET",
-                url: "http://192.168.5.20:8004/sap/opu/odata/sap/ZIHS_STUDENT_SERVICE_SRV/itstudentSet?$format=json",
-                dataType: "JSON"
+                url: "http://E00031:H62A9h62a9@vesa-vfp.vesacons.com:8004/sap/opu/odata/sap/ZIHS_STUDENT_SERVICE_SRV/itstudentSet?$format=json",
+                dataType: "JSON",
+                headers: {
+                    "Access-Control-Allow-Origin" : "http://localhost:8080",
+                    "Access-Control-Allow-Credentials": true
+                }
               }).done(function(data){console.log(data)});
-            //   const url = 'http://192.168.5.20:8004/sap/opu/odata/sap/ZIHS_STUDENT_SERVICE_SRV/itstudentSet?$format=json';
+            //   const url = 'http://E00031:H62A9h62a9@vesa-vfp.vesacons.com:8004/sap/opu/odata/sap/ZIHS_STUDENT_SERVICE_SRV/itstudentSet?$format=json';
             //   const model = new sap.ui.model.odata.v2.ODataModel(url);
             //   console.log(model);
         },
